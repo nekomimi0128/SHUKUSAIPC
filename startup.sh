@@ -1,8 +1,10 @@
 #!/bin/bash
-# 初回起動時のセットアップ
 set -e
 
-# VNCパスワード設定（共用パスワード: shortstay）
+# VNCパスワードディレクトリ作成
+mkdir -p /home/vmpcuser/.vnc
+
+# VNCパスワード設定
 echo "shortstay" | vncpasswd -f > /home/vmpcuser/.vnc/passwd
 chown vmpcuser:vmpcuser /home/vmpcuser/.vnc/passwd
 chmod 600 /home/vmpcuser/.vnc/passwd
