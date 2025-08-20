@@ -1,3 +1,2 @@
 #!/bin/sh
-xrdb $HOME/.Xresources
-dbus-launch --exit-with-session startxfce4 &
+xterm &
